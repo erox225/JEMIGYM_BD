@@ -9,14 +9,14 @@ DELETE FROM ESTANCIA;
 -- Eliminar registros de la tabla ESTADO
 DELETE FROM ESTADO;
 
+-- Eliminar registros de la tabla SUSCRIPCION
+DELETE FROM SUSCRIPCION;
+
 -- Eliminar registros de la tabla CONFIGURACION_GENERAL
 DELETE FROM CONFIGURACION_GENERAL;
 
 -- Eliminar registros de la tabla CONFIGURACION_SUSCRIPCION
 DELETE FROM CONFIGURACION_SUSCRIPCION;
-
--- Eliminar registros de la tabla SUSCRIPCION
-DELETE FROM SUSCRIPCION;
 
 -- Volver a habilitar el modo seguro
 SET SQL_SAFE_UPDATES = 1;
