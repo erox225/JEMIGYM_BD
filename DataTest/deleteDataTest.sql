@@ -3,26 +3,30 @@ USE FUNCTIONALGYM;
 -- Deshabilitar el modo seguro temporalmente
 SET SQL_SAFE_UPDATES = 0;
 
--- Eliminar registros en tabla QR
-DELETE FROM QR WHERE ID_RESERVA;
+-- Eliminar datos en tabla QR
+DELETE FROM QR WHERE ID_RESERVA IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
--- Eliminar registros en tabla RESERVA_ESTADOS
-DELETE FROM RESERVA_ESTADOS WHERE ID_RESERVA;
+-- Eliminar datos en tabla RESERVA_ESTADOS
+DELETE FROM RESERVA_ESTADOS WHERE ID_RESERVA IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
--- Eliminar registros en tabla RESERVA
-DELETE FROM RESERVA WHERE ID_PLANIFICACION;
+-- Eliminar datos en tabla RESERVA
+DELETE FROM RESERVA WHERE ID IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
--- Eliminar registros en tabla cliente_suscripcion
-DELETE FROM cliente_suscripcion;
+-- Eliminar datos en tabla cliente_suscripcion
+DELETE FROM cliente_suscripcion WHERE ID_CLIENTE IN (SELECT ID FROM USUARIO WHERE USERNAME LIKE 'client%');
 
--- Eliminar registros en tabla PLANIFICACION
-DELETE FROM PLANIFICACION;
+-- Eliminar datos en tabla PLANIFICACION
+DELETE FROM PLANIFICACION WHERE ID IN (1, 2, 3, 4, 5);
 
--- Eliminar registros en tabla PERSONA
-DELETE FROM PERSONA;
+-- Eliminar datos en tabla ESTADO_CLIENTE
+DELETE FROM ESTADO_CLIENTE WHERE ID_CLIENTE IN (SELECT ID FROM USUARIO WHERE USERNAME LIKE 'client%');
 
--- Eliminar registros en tabla USUARIO
-DELETE FROM USUARIO;
+-- Eliminar datos en tabla PERSONA
+DELETE FROM PERSONA WHERE IX_USUARIO IN ('U000001', 'U000002', 'U000003', 'U000004', 'U000005', 'U000006', 'U000007', 'U000008', 'U000009', 'U000010', 'U000011', 'U000012');
+
+-- Eliminar datos en tabla USUARIO
+DELETE FROM USUARIO WHERE IX IN ('U000001', 'U000002', 'U000003', 'U000004', 'U000005', 'U000006', 'U000007', 'U000008', 'U000009', 'U000010', 'U000011', 'U000012');
+
 
 
 
